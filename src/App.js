@@ -1,15 +1,10 @@
-import Greeting from "./components/pure/Greeting";
-
+import TaskList from "./components/containers/TaskList";
 function App() {
-    let age = 49;
-    let name = 'Marlon'
+
     return (
         <div className="App">
             <h1>Aprendiendo reactjs.  Configuración inicial</h1>
-            <Greeting
-                name={name}
-                age={age}
-            />
+            <TaskList />
         </div>
     );
 }
