@@ -1,10 +1,11 @@
-import TaskList from "./components/containers/TaskList";
+import ComponentA from "./exercises/sesions_123/ComponentA";
+
 function App() {
 
     return (
         <div className="App">
-            <h1>Aprendiendo reactjs.  Configuración inicial</h1>
-            <TaskList />
+            <h1>Tarea Sesiones 1, 2 y 3</h1>
+            <ComponentA />
         </div>
     );
 }
