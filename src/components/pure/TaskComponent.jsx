@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types'
 import { Task } from '../../models/task.class';
 
+import '../../assets/styles/task.scss';
+
 const TaskComponent = ({ task }) => {
 
   useEffect(() => {
@@ -12,15 +14,11 @@ const TaskComponent = ({ task }) => {
   }, [task]);
 
   return (
-    <div>
-      <br />
-      <hr></hr>
-      <h4>Tareas</h4>
-      <h5>Nombre --- {task.name}</h5>
-      <h5>Descripción --- {task.description}</h5>
-      <h5>Status --- {task.completed ? 'COMPLETADA' : 'NO COMPLETADA'}</h5>
-      <h5>Nivel --- {task.level}</h5>
-      <hr></hr>
+    <div className='task'>
+      <p className='task__name'>{task.name}</p>
+      <p className='task__description'>{task.description}</p>
+      <p className={task.completed ? 'task__completed' : 'task__uncompleted'}>{task.completed ? 'COMPLETADA' : 'NO COMPLETADA'}</p>
+      <p>{task.level}</p>
     </div>
   )
 }
