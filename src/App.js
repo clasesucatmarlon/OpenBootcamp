@@ -1,10 +1,12 @@
-import TaskList from "./components/containers/TaskList";
-function App() {
+import Example4 from "./practices/Example4";
 
-    return (
+function App() {
+     return (
         <div className="App">
-            <h1>Aprendiendo reactjs.  Configuración inicial</h1>
-            <TaskList />
+            <h1>Aprendiendo reactjs.  Manejo de Hooks</h1>
+            <Example4 nombre='marlon'>
+                <h5>Contenido del props.children</h5>
+            </Example4>
         </div>
     );
 }
