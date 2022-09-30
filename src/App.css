@@ -16,5 +16,10 @@ h1 {
 h2 {
     text-align: center;
     margin-top: 2rem;
+    background-color: palevioletred
+}
+
+h3 {
+    background-color: burlywood;
 }
 
