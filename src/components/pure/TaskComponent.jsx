@@ -4,7 +4,7 @@ import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import '../../assets/styles/task.scss';
 
-const TaskComponent = ({ task }) => {
+const TaskComponent = ({ task, taskCompleted, taskDelete }) => {
 
 	/** A hook that is called when the component is created and 
 	 * when it is destroyed
@@ -51,37 +51,55 @@ const TaskComponent = ({ task }) => {
 	 */
 	const iconTaskCompleted = () => {
 		if (task.completed) {
-			return (<i className="bi-toggle-on align-middle d-flex justify-content-center" style={{ color: 'green' }}></i>);
+			return (
+				<i 
+					className="bi-toggle-on d-flex justify-content-center"
+					style={{ color: 'green', fontSize: '1.4rem' }}
+					onClick={() => taskCompleted(task)}
+				></i>
+			);
 		} else {
-			return (<i className="bi-toggle-off align-middle d-flex justify-content-center" style={{ color: 'red' }}></i>);
+			return (
+				<i
+					className="bi-toggle-off d-flex justify-content-center"
+					style={{ color: 'red', fontSize: '1.4rem' }}
+					onClick={() => taskCompleted(task)}
+				></i>
+			);
 		}
 	};
 
 	return (
-		<tr className='fw-norml'>
-			<td>
+		<tr className='fw-normal'>
+			<td className='align-middle'>
 				<span>{task.name}</span>
 			</td>
-			<td>
+			<td className='align-middle'>
 				<span>{task.description}</span>
 			</td>
-			<td>
+			<td className='align-middle'>
 				<span>{taskLevelBadge()}</span>
 			</td>
-			<td>
+			<td className='align-middle'>
 				<span>
 					{iconTaskCompleted()}
 				</span>
 			</td>
-			<td>
-				<i className="bi bi-trash align-middle d-flex justify-content-center" style={{ color: 'red' }}></i>
+			<td className='align-middle'>
+				<i	
+					className="bi bi-trash d-flex justify-content-center"
+					style={{ color: 'red', fontSize: '1.3rem' }}
+					onClick={() => taskDelete(task)}
+				></i>
 			</td>
 		</tr>
 	)
 };
 
 TaskComponent.propTypes = {
-	task: PropTypes.instanceOf(Task)
+	task: PropTypes.instanceOf(Task).isRequired,
+	taskCompleted: PropTypes.func.isRequired,
+	taskDelete: PropTypes.func.isRequired
 };
 
 export default TaskComponent;
