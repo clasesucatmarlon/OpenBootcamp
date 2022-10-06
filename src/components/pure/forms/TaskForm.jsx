@@ -1,10 +1,9 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 import { LEVELS } from '../../../models/levels.enum';
 
 const TaskForm = ({ addNewTask }) => {
-
 	const nameRef = useRef('');
 	const descriptionRef = useRef('');
 	const levelRef = useRef(LEVELS.NORMAL);
@@ -21,18 +20,23 @@ const TaskForm = ({ addNewTask }) => {
 			name: nameRef.current.value,
 			description: descriptionRef.current.value,
 			completed: false,
-			level: levelRef.current.value
+			level: levelRef.current.value,
 		};
 		addNewTask(task);
 		event.target.reset();
 	};
 
 	return (
-		<form onSubmit={addTask} className="border p-3 bg-white">
+		<form onSubmit={addTask} className='border p-3 bg-white'>
 			<div className='d-flex flex-column'>
-				<label htmlFor="inputName" className='d-flex align-items-center fw-bold'>Nombre:</label>
+				<label
+					htmlFor='inputName'
+					className='d-flex align-items-center fw-bold'
+				>
+					Nombre:
+				</label>
 				<input
-					type="text"
+					type='text'
 					id='inputName'
 					ref={nameRef}
 					placeholder='Ingrese nombre'
@@ -43,9 +47,14 @@ const TaskForm = ({ addNewTask }) => {
 			</div>
 
 			<div className='d-flex flex-column'>
-				<label htmlFor="inputDescription" className='d-flex align-items-center fw-bold'>Descripción:</label>
+				<label
+					htmlFor='inputDescription'
+					className='d-flex align-items-center fw-bold'
+				>
+					Descripción:
+				</label>
 				<input
-					type="text"
+					type='text'
 					id='inputDescription'
 					ref={descriptionRef}
 					placeholder='Ingrese descripción'
@@ -55,9 +64,14 @@ const TaskForm = ({ addNewTask }) => {
 			</div>
 
 			<div className='d-flex flex-column'>
-				<label htmlFor="inputLevel" className='d-flex align-items-center fw-bold'>Prioridad:</label>
+				<label
+					htmlFor='inputLevel'
+					className='d-flex align-items-center fw-bold'
+				>
+					Prioridad:
+				</label>
 				<select
-					id="inputLevel"
+					id='inputLevel'
 					className='mb-3'
 					ref={levelRef}
 					defaultValue={LEVELS.NORMAL}
@@ -67,15 +81,17 @@ const TaskForm = ({ addNewTask }) => {
 					<option value={LEVELS.BLOCKING}>{LEVELS.BLOCKING}</option>
 				</select>
 			</div>
-			<div >
-				<button type='submit' className='btn btn-primary w-100'>Agregar tarea</button>
+			<div>
+				<button type='submit' className='btn btn-primary w-100'>
+					Agregar tarea
+				</button>
 			</div>
 		</form>
-	)
+	);
 };
 
 TaskForm.propTypes = {
-	addNewTask: PropTypes.func.isRequired
+	addNewTask: PropTypes.func.isRequired,
 };
 
 export default TaskForm;
