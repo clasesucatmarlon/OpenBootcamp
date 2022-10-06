@@ -1,28 +1,28 @@
 .task {
-    margin: 1.5rem 0;
-    border: 1px solid black;
-    padding: 1rem;
+	margin: 1.5rem 0;
+	border: 1px solid black;
+	padding: 1rem;
 }
 
 .task__name {
-    font-weight: bold;
-    color: cadetblue;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-};
+	font-weight: bold;
+	color: cadetblue;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
 
 task_description {
-    color: cadetblue;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+	color: cadetblue;
+	font-size: 1.5rem;
+	text-transform: uppercase;
 }
 
 .task__completed {
-    font-weight: bold;
-    color: green;
+	font-weight: bold;
+	color: green;
 }
 
 .task__uncompleted {
-    font-weight: bold;
-    color: red;
+	font-weight: bold;
+	color: red;
 }
