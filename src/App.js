@@ -1,11 +1,11 @@
 import './App.css';
-import TaskPage from './pages/tasks/TaskPage';
+import Figure from './exercises/sesions_101112/Figure';
 
 function App() {
 	return (
 		<div className='App'>
 			<h1 className='bg-dark'>Aprendiendo reactjs. Manejo de Hooks</h1>
-			<TaskPage />
+			<Figure />
 		</div>
 	);
 }

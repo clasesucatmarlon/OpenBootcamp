@@ -17,7 +17,7 @@ const ComponentB = ({ newContact }) => {
 
 ComponentB.propTypes = {
 	task: PropTypes.instanceOf(Contact),
-	newContact: PropTypes.object
+	newContact: PropTypes.object,
 };
 
 export default ComponentB;
