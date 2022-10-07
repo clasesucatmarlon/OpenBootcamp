@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { LEVELS } from '../../../models/levels.enum';
 
-const TaskForm = ({ addNewTask }) => {
+const TaskForm = ({ addNewTask, numberTasks }) => {
 	const nameRef = useRef('');
 	const descriptionRef = useRef('');
 	const levelRef = useRef(LEVELS.NORMAL);
@@ -72,7 +72,7 @@ const TaskForm = ({ addNewTask }) => {
 				</label>
 				<select
 					id='inputLevel'
-					className='mb-3'
+					className='mb-3 form-select'
 					ref={levelRef}
 					defaultValue={LEVELS.NORMAL}
 				>
@@ -83,7 +83,7 @@ const TaskForm = ({ addNewTask }) => {
 			</div>
 			<div>
 				<button type='submit' className='btn btn-primary w-100'>
-					Agregar tarea
+					{numberTasks > 0 ? 'Agregar otra tarea' : 'Crear tarea'}
 				</button>
 			</div>
 		</form>
@@ -92,6 +92,7 @@ const TaskForm = ({ addNewTask }) => {
 
 TaskForm.propTypes = {
 	addNewTask: PropTypes.func.isRequired,
+	numberTasks: PropTypes.number.isRequired,
 };
 
 export default TaskForm;
