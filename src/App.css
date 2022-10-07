@@ -1,3 +1,9 @@
+:root {
+	--main-bg-color: #0b3c5d;
+	--secondary-bg-color: #015249;
+	--gold-leaf: #d9b310;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -16,10 +22,42 @@ h1 {
 
 h2 {
 	text-align: center;
-	margin-top: 2rem;
-	background-color: palevioletred;
+	margin: 2rem 0 1.5rem 0;
+	padding: 0.75rem 0;
+	background-color: var(--secondary-bg-color);
+	color: white;
+	text-transform: uppercase;
 }
 
 h3 {
 	background-color: burlywood;
+}
+
+.btn {
+	background-color: var(--main-bg-color);
+}
+
+.palettra {
+	starry_night: #0375b4;
+	irises: #007849;
+	evening: #262228;
+	blueberry: #687a8f;
+
+	vermillon: #fc4a1a;
+	sunshine: #f7b733;
+	fresh: #4abdac;
+
+	celulean: #4484ce;
+	tangerine: #f19f4d;
+	aluminium: #d9d9d9;
+
+	prussian_blue: #0b3c5d;
+	sky_blue: #328cc1;
+	gold_leaf: #d9b310;
+	ivory_black: #1d2731;
+
+	feather: #77c9d4;
+	marine: #57bc90;
+	forest: #015249;
+	sleek_gray: #a5a5af;
 }

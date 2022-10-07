@@ -1,20 +1,9 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import '../../assets/styles/task.scss';
 
 const TaskComponent = ({ task, taskCompleted, taskDelete }) => {
-	/** A hook that is called when the component is created and
-	 * when it is destroyed
-	 */
-	useEffect(() => {
-		// console.log('Created task...');
-		return () => {
-			// console.log(`Task: ${task.name} is going to unmount...`)
-		};
-	}, [task]);
-
 	/**
 	 * It returns a JSX element based on the value of the `task.level` property
 	 * @return A function that returns a JSX element.
@@ -75,12 +64,16 @@ const TaskComponent = ({ task, taskCompleted, taskDelete }) => {
 	};
 
 	return (
-		<tr className='fw-normal'>
+		<tr>
 			<td className='align-middle'>
-				<span>{task.name}</span>
+				<span className={task.completed ? 'task__completed' : ''}>
+					{task.name}
+				</span>
 			</td>
 			<td className='align-middle'>
-				<span>{task.description}</span>
+				<span className={task.completed ? 'task__completed' : ''}>
+					{task.description}
+				</span>
 			</td>
 			<td className='align-middle'>
 				<span>{taskLevelBadge()}</span>

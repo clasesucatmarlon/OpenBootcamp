@@ -1,25 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class';
-import TaskComponent from '../pure/TaskComponent';
+import { AllTasks } from '../../data/data';
 import TaskForm from '../pure/forms/TaskForm';
+import Table from './Table';
 
 const TaskList = () => {
-	const newTask = new Task(
-		'Tarea 1',
-		'Descripción Tarea 1',
-		false,
-		LEVELS.NORMAL
-	);
-	const newTask2 = new Task(
-		'Tarea 2',
-		'Descripción Tarea 2',
-		true,
-		LEVELS.URGENT
-	);
-
-	const [listTasks, setListTasks] = useState([newTask, newTask2]);
-	// const [loading, setLoading] = useState(true);
+	const [listTasks, setListTasks] = useState(AllTasks);
+	const [loading, setLoading] = useState(true);
 
 	/**
 	 * The function takes a task as an argument, creates a temporary array of the list of tasks, finds the
@@ -63,11 +50,10 @@ const TaskList = () => {
 	 * listTasks state is modified
 	 */
 	useEffect(() => {
-		// console.log('Task State has been modified...');
-		// setLoading(false);
-		return () => {
-			// console.log('TaskList component is going unmount...');
-		};
+		setTimeout(() => {
+			setLoading(false);
+		}, 2500);
+		return () => {};
 	}, [listTasks]);
 
 	return (
@@ -81,41 +67,27 @@ const TaskList = () => {
 							data-mbd-perfect-scrollbar='true'
 							style={{ position: 'relative' }}
 						>
-							<table className='table table-primary table-striped'>
-								<thead>
-									<tr className='bg-primary'>
-										<th scope='col'>Título</th>
-										<th scope='col'>Descripción</th>
-										<th scope='col' className='text-center'>
-											Prioridad
-										</th>
-										<th scope='col' className='text-center'>
-											Status
-										</th>
-										<th scope='col' className='text-center'>
-											Acciones
-										</th>
-									</tr>
-								</thead>
-								<tbody className='table-group-divider'>
-									{listTasks.map((task, index) => {
-										return (
-											<TaskComponent
-												key={index}
-												task={task}
-												taskCompleted={taskCompleted}
-												taskDelete={taskDelete}
-											/>
-										);
-									})}
-								</tbody>
-							</table>
+							{listTasks.length > 0 ? (
+								<Table
+									listTasks={listTasks}
+									taskCompleted={taskCompleted}
+									taskDelete={taskDelete}
+									loading={loading}
+								/>
+							) : (
+								<>
+									<h5 className='text-center'>
+										En este momento no hay tareas...!!!
+									</h5>
+									<h6 className='text-center'>Por favor agregue una</h6>
+								</>
+							)}
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className='bg-light mt-4 p-3'>
-				<TaskForm addNewTask={addNewTask} />
+				<TaskForm addNewTask={addNewTask} numberTasks={listTasks.length} />
 			</div>
 		</div>
 	);
