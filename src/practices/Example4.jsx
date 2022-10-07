@@ -14,8 +14,6 @@ const Examplo4 = (props) => {
 			{/* props.children pintará por defecto lo que
         se encuentre entre las etiquetas de apertura
         y cierre de este componente desde el componente padre */}
-
-			
 		</div>
 	);
 };
