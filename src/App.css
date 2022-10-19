@@ -1,6 +1,6 @@
 :root {
-	--main-bg-color: #0b3c5d;
-	--secondary-bg-color: #015249;
+	--main-bg-color: #015fb1;
+	--secondary-bg-color: #4fc379;
 	--gold-leaf: #d9b310;
 }
 
@@ -37,7 +37,7 @@ h3 {
 	background-color: var(--main-bg-color);
 }
 
-.palettra {
+.paletta {
 	starry_night: #0375b4;
 	irises: #007849;
 	evening: #262228;
