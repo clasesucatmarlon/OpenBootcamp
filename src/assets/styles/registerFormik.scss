@@ -1,0 +1,20 @@
+.placeholder {
+	padding: 0.3rem;
+	font-size: 0.8rem;
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+}
+
+.info__error {
+	color: red;
+	font-size: 0.6rem;
+	transition: opacity 0.5s 0s ease;
+	padding: 0.2rem 0.3rem;
+}
+
+.info__success {
+	color: green;
+	font-style: 0.6rem;
+	padding: 0.2rem 0.3rem;
+}

@@ -19,5 +19,9 @@
 		"titleBar.inactiveForeground": "#15202b99"
 	},
 	"peacock.color": "#61dafb",
-	"docwriter.style": "DocBlock"
+	"docwriter.style": "DocBlock",
+	"docwriter.progress.trackFunctions": true,
+	"docwriter.progress.trackMethods": true,
+	"docwriter.progress.trackClasses": true,
+	"docwriter.progress.trackTypes": true
 }
