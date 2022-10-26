@@ -1,4 +1,4 @@
 .task__completed {
-	color: gray;
+	color: var(--task-color-grey);
 	text-decoration: line-through;
 }

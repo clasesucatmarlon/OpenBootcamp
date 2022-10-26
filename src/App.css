@@ -1,7 +1,10 @@
 :root {
-	--main-bg-color: #015fb1;
-	--secondary-bg-color: #4fc379;
-	--gold-leaf: #d9b310;
+	--background-color: rgb(235, 229, 221);
+	--main-color-blue: #215fb2;
+	--main-color-green: #4dc47a;
+	--main-color-orange: #faa000;
+	--text-color-white: white;
+	--task-color-grey: grey;
 }
 
 * {
@@ -11,12 +14,13 @@
 }
 
 body {
-	background-color: rgb(235, 229, 221);
+	background-color: var(--background-color);
 	padding: 0rem;
 }
 
 h1 {
-	color: white;
+	background-color: var(--main-color-green);
+	color: var(--text-color-white);
 	text-align: center;
 }
 
@@ -24,17 +28,17 @@ h2 {
 	text-align: center;
 	margin: 2rem 0 1.5rem 0;
 	padding: 0.75rem 0;
-	background-color: var(--secondary-bg-color);
-	color: white;
+	background-color: var(--main-color-green);
+	color: var(--text-color-white);
 	text-transform: uppercase;
 }
 
 h3 {
-	background-color: burlywood;
+	background-color: var(--main-color-green);
 }
 
 .btn {
-	background-color: var(--main-bg-color);
+	background-color: var(--main-color-blue);
 }
 
 .paletta {

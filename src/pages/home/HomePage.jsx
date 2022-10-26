@@ -1,11 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+	const history = useNavigate();
+
+	const navigate = (path) => {
+		history(path);
+	};
+
 	return (
-		<div>
+		<>
 			<h2>Home Page</h2>
-			<h3>Dashboard</h3>
-		</div>
+			<div className='d-flex justify-content-center'>
+				<button
+					className='btn btn-primary'
+					onClick={() => navigate('/profile')}
+				>
+					Profile
+				</button>
+			</div>
+		</>
 	);
 };
 
