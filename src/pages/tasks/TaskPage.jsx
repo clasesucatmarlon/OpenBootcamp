@@ -4,7 +4,10 @@ import TaskList from '../../components/containers/TaskList';
 const TaskPage = () => {
 	return (
 		<div>
-			<TaskList />
+			<h2>Task list</h2>
+			<div>
+				<TaskList />
+			</div>
 		</div>
 	);
 };

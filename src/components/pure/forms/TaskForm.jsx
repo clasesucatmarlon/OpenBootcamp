@@ -27,13 +27,13 @@ const TaskForm = ({ addNewTask, numberTasks }) => {
 	};
 
 	return (
-		<form onSubmit={addTask} className='border p-3 bg-white'>
+		<form onSubmit={addTask} className='border p-3 bg-white w-100'>
 			<div className='d-flex flex-column'>
 				<label
 					htmlFor='inputName'
 					className='d-flex align-items-center fw-bold'
 				>
-					Nombre:
+					Title task:
 				</label>
 				<input
 					type='text'
@@ -51,7 +51,7 @@ const TaskForm = ({ addNewTask, numberTasks }) => {
 					htmlFor='inputDescription'
 					className='d-flex align-items-center fw-bold'
 				>
-					Descripción:
+					Description:
 				</label>
 				<input
 					type='text'
@@ -68,7 +68,7 @@ const TaskForm = ({ addNewTask, numberTasks }) => {
 					htmlFor='inputLevel'
 					className='d-flex align-items-center fw-bold'
 				>
-					Prioridad:
+					Priority:
 				</label>
 				<select
 					id='inputLevel'
@@ -82,7 +82,7 @@ const TaskForm = ({ addNewTask, numberTasks }) => {
 				</select>
 			</div>
 			<div>
-				<button type='submit' className='btn text-white w-100'>
+				<button type='submit' className='btn btn-primary text-white w-100 '>
 					{numberTasks > 0 ? 'Agregar otra tarea' : 'Crear tarea'}
 				</button>
 			</div>

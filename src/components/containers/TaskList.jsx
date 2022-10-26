@@ -52,41 +52,38 @@ const TaskList = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 2500);
+		}, 1500);
 		return () => {};
 	}, [listTasks]);
 
 	return (
-		<div>
-			<h2>Lista de tareas</h2>
-			<div>
-				<div className='col-12'>
-					<div className='card'>
-						<div
-							className='card-body'
-							data-mbd-perfect-scrollbar='true'
-							style={{ position: 'relative' }}
-						>
-							{listTasks.length > 0 ? (
-								<Table
-									listTasks={listTasks}
-									taskCompleted={taskCompleted}
-									taskDelete={taskDelete}
-									loading={loading}
-								/>
-							) : (
-								<>
-									<h5 className='text-center'>
-										En este momento no hay tareas...!!!
-									</h5>
-									<h6 className='text-center'>Por favor agregue una</h6>
-								</>
-							)}
-						</div>
+		<div className='d-flex flex-column align-items-center'>
+			<div className='col-12'>
+				<div className='card'>
+					<div
+						className='card-body'
+						data-mbd-perfect-scrollbar='true'
+						style={{ position: 'relative' }}
+					>
+						{listTasks.length > 0 ? (
+							<Table
+								listTasks={listTasks}
+								taskCompleted={taskCompleted}
+								taskDelete={taskDelete}
+								loading={loading}
+							/>
+						) : (
+							<>
+								<h5 className='text-center'>
+									There are no tasks at this time...!!!
+								</h5>
+								<h6 className='text-center'>Please add one</h6>
+							</>
+						)}
 					</div>
 				</div>
 			</div>
-			<div className='bg-light mt-4 p-3'>
+			<div className='bg-light mt-4 p-3 d-flex justify-content-center w-50 '>
 				<TaskForm addNewTask={addNewTask} numberTasks={listTasks.length} />
 			</div>
 		</div>

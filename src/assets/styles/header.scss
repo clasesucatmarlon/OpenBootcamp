@@ -1,7 +1,38 @@
-.header {
-	// background-color: var(--main-bg-color);
+.menu {
+	background-color: var(--main-color-orange);
+	height: 50px;
+	margin-bottom: 1rem;
 }
 
-.header__title {
-	color: var(--gold-leaf);
+.menu__logo {
+	width: 30%;
+	display: flex;
+	align-items: center;
+	h6 {
+		font-size: 2rem;
+		display: flex;
+		align-items: center;
+		margin: auto 0;
+		span {
+			color: var(--text-color-white);
+			margin-left: 0.5rem;
+		}
+	}
+	img {
+		margin-right: 0.5rem;
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.menu__link {
+	width: 70%;
+	text-decoration: none;
+	color: var(--text-color-white);
+	font-size: 1.1rem;
+	font-weight: bold;
+	padding: 0 2rem;
+	&:hover {
+		color: var(main-color-blue);
+	}
 }

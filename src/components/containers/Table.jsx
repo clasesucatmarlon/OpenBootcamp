@@ -13,22 +13,22 @@ const Table = ({ listTasks, taskCompleted, taskDelete, loading }) => {
 						size={30}
 						aria-label='Loading Spinner'
 					/>
-					<p>Cargando</p>
+					<p>Loading...</p>
 				</div>
 			) : (
 				<table className='table table-primary table-striped'>
 					<thead>
 						<tr>
-							<th scope='col'>Título</th>
-							<th scope='col'>Descripción</th>
+							<th scope='col'>Title</th>
+							<th scope='col'>Description</th>
 							<th scope='col' className='text-center'>
-								Prioridad
+								Priority
 							</th>
 							<th scope='col' className='text-center'>
 								Status
 							</th>
 							<th scope='col' className='text-center'>
-								Acciones
+								Actions
 							</th>
 						</tr>
 					</thead>

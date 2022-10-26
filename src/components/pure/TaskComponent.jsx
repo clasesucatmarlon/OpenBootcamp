@@ -48,7 +48,7 @@ const TaskComponent = ({ task, taskCompleted, taskDelete }) => {
 			return (
 				<i
 					className='bi-toggle-on d-flex justify-content-center'
-					style={{ color: 'green', fontSize: '1.4rem' }}
+					style={{ color: 'green', fontSize: '1.4rem', cursor: 'pointer' }}
 					onClick={() => taskCompleted(task)}
 				></i>
 			);
@@ -56,7 +56,7 @@ const TaskComponent = ({ task, taskCompleted, taskDelete }) => {
 			return (
 				<i
 					className='bi-toggle-off d-flex justify-content-center'
-					style={{ color: 'red', fontSize: '1.4rem' }}
+					style={{ color: 'red', fontSize: '1.4rem', cursor: 'pointer' }}
 					onClick={() => taskCompleted(task)}
 				></i>
 			);
@@ -84,7 +84,7 @@ const TaskComponent = ({ task, taskCompleted, taskDelete }) => {
 			<td className='align-middle'>
 				<i
 					className='bi bi-trash d-flex justify-content-center'
-					style={{ color: 'red', fontSize: '1.3rem' }}
+					style={{ color: 'red', fontSize: '1.3rem', cursor: 'pointer' }}
 					onClick={() => taskDelete(task)}
 				></i>
 			</td>
