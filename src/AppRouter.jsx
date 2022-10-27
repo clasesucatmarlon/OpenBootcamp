@@ -10,6 +10,7 @@ import TaskPage from './pages/tasks/TaskPage';
 import Profile from './pages/profile/Profile';
 import TaskDetails from './pages/tasks/TaskDetails';
 
+// MAIN
 function AppRouter() {
 	return (
 		<div className=''>
