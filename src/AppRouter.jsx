@@ -11,6 +11,7 @@ import Profile from './pages/profile/Profile';
 import TaskDetails from './pages/tasks/TaskDetails';
 
 // MAIN
+// MAIN 2
 function AppRouter() {
 	return (
 		<div className=''>
